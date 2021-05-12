@@ -93,6 +93,7 @@ LEFT JOIN employee_info AS ei ON de.emp_no = ei.emp_no
 WHERE  d.dept_name = 'Sales' OR d.dept_name = 'Development';
 
 -- Frequency count of last names in descending order
-SELECT last_name, count(last_name)
+SELECT last_name,COUNT(last_name)
 FROM employee_info
-GROUP BY last_name;
+GROUP BY last_name
+ORDER BY COUNT DESC;
