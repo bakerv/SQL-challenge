@@ -48,7 +48,6 @@ SELECT * FROM employee_salaries;
 SELECT * FROM employee_titles;
 
 -- Query data tables
-
 -- List employee number, last name, first name, sex, and salary
 SELECT ei.emp_no,ei.last_name,ei.first_name,ei.sex,s.salary
 FROM employee_salaries AS s
