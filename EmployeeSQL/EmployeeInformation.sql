@@ -79,8 +79,20 @@ FROM employee_info
 WHERE first_name = 'Hercules' AND SUBSTRING(last_name,1,1) = 'B';
 
 -- For all employees in the sales department; employee number, last name, first name, and department name
-SELECT d.dept_name,de.emp_no,ei.last_name,ei.first_name
+SELECT de.emp_no,ei.last_name,ei.first_name,d.dept_name
 FROM departments AS d
 RIGHT JOIN department_employees AS de ON d.dept_no = de.dept_no
 LEFT JOIN employee_info AS ei ON de.emp_no = ei.emp_no
-WHERE ;
+WHERE  d.dept_name = 'Sales';
+
+-- For all employees in the sales and development departments; employee number, last name, first name, and department name
+SELECT de.emp_no,ei.last_name,ei.first_name,d.dept_name
+FROM departments AS d
+RIGHT JOIN department_employees AS de ON d.dept_no = de.dept_no
+LEFT JOIN employee_info AS ei ON de.emp_no = ei.emp_no
+WHERE  d.dept_name = 'Sales' OR d.dept_name = 'Development';
+
+-- Frequency count of last names in descending order
+SELECT last_name, count(last_name)
+FROM employee_info
+GROUP BY last_name;
