@@ -1,8 +1,10 @@
 # SQL-challenge
 This challenge leverages the power of SQL to query data across multiple data sets. The python packages SQLalchemy and Pandas are used to create visualizations of the SQL Tables.
 
+![SQL Code Sample](https://github.com/bakerv/SQL-challenge/blob/main/Images/SQL_sample.PNG)
+
 ## Data Used
-The Pewlett Hackard data sets are used for this challenge. These data sets emulate real employee data that is stored across 6 separate files to control access and file security. 
+The Pewlett Hackard data sets are used for this challenge. These data sets emulate real employee data that is stored across separate files to control access and file security. 
 
 ## Analysis
 
@@ -15,3 +17,4 @@ This distrubution is heavily right skewed, with a large portion of employees at 
 When you group the data by job title, you see that senior positions make less, on average, than their entry level counterparts.
 
 ![Employee Average Salaries](https://github.com/bakerv/SQL-challenge/blob/main/Images/Salary_Barchart.png)
+
