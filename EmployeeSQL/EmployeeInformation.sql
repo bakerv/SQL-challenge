@@ -96,3 +96,11 @@ SELECT last_name,COUNT(last_name)
 FROM employee_info
 GROUP BY last_name
 ORDER BY COUNT DESC;
+
+-- Find the average salary for each job title
+CREATE TABLE average_salary AS
+	SELECT ROUND(AVG(s.salary),2), et.title
+	FROM employee_info AS ei
+	LEFT JOIN employee_titles AS et ON ei.emp_title = et.title_id
+	LEFT JOIN employee_salaries AS s ON ei.emp_no = s.emp_no
+	GROUP BY title;
